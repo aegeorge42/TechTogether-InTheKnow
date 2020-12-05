@@ -26,10 +26,16 @@ def get_keywords(text):
 keywordsteacher = set(get_keywords(teacher))
 keywordsbad = set(get_keywords(bad))
 
+suggestedStudyTerms = []
 cnt = 0
 for item in keywordsteacher:
     if item in keywordsbad:
         cnt += 1
+    else:
+        print(f"Missing: {item}")
+        suggestedStudyTerms.append(item)
+
+print(suggestedStudyTerms)
 
 lenkeywordsteacher = len(keywordsteacher)
 keywordscore = int((cnt*100)/lenkeywordsteacher)
