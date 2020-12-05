@@ -1,10 +1,10 @@
 import spacy
 from string import punctuation
 
-
-GOODNOTES = open("short.txt")
-BADNOTES = open()
+GOODNOTES = open("shortnotes.txt")
+BADNOTES = open("badnotes.txt")
 good = GOODNOTES.read()
+bad = BADNOTES.read()
 
 nlp = spacy.load("en_core_web_lg")
 
@@ -20,5 +20,9 @@ def get_keywords(text):
     return result
 
 
-output = set(get_keywords(good))
-print(output)
+keywordsgood = set(get_keywords(good))
+keywordsbad = set(get_keywords(bad))
+
+for item in keywordsgood:
+    if item in keywordsbad:
+        print(item)
