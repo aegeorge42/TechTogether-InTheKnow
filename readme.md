@@ -16,3 +16,18 @@ team members:
 Notable links
 
 * [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
+
+
+Resources
+
+PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
+@InProceedings{boudin:2016:COLINGDEMO,
+  author    = {Boudin, Florian},
+  title     = {pke: an open source python-based keyphrase extraction toolkit},
+  booktitle = {Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: System Demonstrations},
+  month     = {December},
+  year      = {2016},
+  address   = {Osaka, Japan},
+  pages     = {69--73},
+  url       = {http://aclweb.org/anthology/C16-2015}
+}
