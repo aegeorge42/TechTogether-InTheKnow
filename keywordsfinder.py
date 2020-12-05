@@ -4,6 +4,9 @@ from collections import Counter
 from string import punctuation
 import pke
 
+nltk.download('stopwords')
+nltk.download('universal_tagset')
+
 import en_core_web_lg
 nlp = en_core_web_lg.load()
 
