@@ -34,11 +34,17 @@ for item in keywordsteacher:
     else:
         print(f"Missing: {item}")
         suggestedStudyTerms.append(item)
+        
+doc = nlp(str(suggestedStudyTerms))
+entitylist = [(X.text, X.label_) for X in doc.ents]
 
-print(suggestedStudyTerms)
+dict = {}
+for pair in entitylist:
+    if pair[1] not in dict:
+        dict[pair[1]] = [pair[0]]
+    else:
+        dict[pair[1]].append(pair[0])
 
 lenkeywordsteacher = len(keywordsteacher)
 keywordscore = int((cnt*100)/lenkeywordsteacher)
 print(f"Similarity score = {keywordscore}%")
-doc = nlp(teacher)
-print([(X.text, X.label_) for X in doc.ents])
