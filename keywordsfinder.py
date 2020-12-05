@@ -3,8 +3,8 @@ from spacy import displacy
 from collections import Counter
 from string import punctuation
 
-TEACHERNOTES = open("shortnotes.txt")
-BADNOTES = open("badnotes.txt")
+TEACHERNOTES = open("neurosci_wiki_people_history.txt")
+BADNOTES = open("neurosci_bad_notes.txt")
 teacher = TEACHERNOTES.read()
 bad = BADNOTES.read()
 
@@ -34,5 +34,5 @@ for item in keywordsteacher:
 lenkeywordsteacher = len(keywordsteacher)
 keywordscore = int((cnt*100)/lenkeywordsteacher)
 print(f"Similarity score = {keywordscore}%")
-#doc = nlp(teacher)
-#print([(X.text, X.label_) for X in doc.ents])
+doc = nlp(teacher)
+print([(X.text, X.label_) for X in doc.ents])
