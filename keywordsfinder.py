@@ -42,7 +42,7 @@ entitylist = [(X.text, X.label_) for X in doc.ents]
 
 tagkwdict = {}
 for pair in entitylist:
-    if pair[1] not in dict:
+    if pair[1] not in tagkwdict:
         tagkwdict[pair[1]] = [pair[0]]
     else:
         tagkwdict[pair[1]].append(pair[0])
