@@ -10,3 +10,9 @@ team members:
 * [julliadoan](https://github.com/juliaadoann)
 * [noemiems](https://github.com/noemiems)
 * [kaszklar](https://github.com/kaszklar)
+
+
+
+Notable links
+
+* [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
