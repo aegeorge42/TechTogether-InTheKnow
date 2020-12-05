@@ -3,9 +3,9 @@ from spacy import displacy
 from collections import Counter
 from string import punctuation
 
-GOODNOTES = open("shortnotes.txt")
+TEACHERNOTES = open("shortnotes.txt")
 BADNOTES = open("badnotes.txt")
-good = GOODNOTES.read()
+teacher = TEACHERNOTES.read()
 bad = BADNOTES.read()
 
 nlp = spacy.load("en_core_web_lg")
@@ -22,12 +22,12 @@ def get_keywords(text):
     return result
 
 
-keywordsgood = set(get_keywords(good))
+keywordsteacher = set(get_keywords(teacher))
 keywordsbad = set(get_keywords(bad))
 
-for item in keywordsgood:
+for item in keywordsteacher:
     if item in keywordsbad:
         print(item)
 
-doc = nlp(good)
+doc = nlp(teacher)
 print([(X.text, X.label_) for X in doc.ents])
