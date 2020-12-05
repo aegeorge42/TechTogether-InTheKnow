@@ -40,12 +40,12 @@ for item in kwteacher:
 doc = nlp(str(suggestedStudyTerms))
 entitylist = [(X.text, X.label_) for X in doc.ents]
 
-dict = {}
+tagkwdict = {}
 for pair in entitylist:
     if pair[1] not in dict:
-        dict[pair[1]] = [pair[0]]
+        tagkwdict[pair[1]] = [pair[0]]
     else:
-        dict[pair[1]].append(pair[0])
+        tagkwdict[pair[1]].append(pair[0])
 print(dict)
 
 lenkwteacher = len(kwteacher)
