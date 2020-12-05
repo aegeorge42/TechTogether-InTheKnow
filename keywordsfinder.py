@@ -3,7 +3,7 @@ from spacy import displacy
 from collections import Counter
 from string import punctuation
 import pke
-
+import nltk
 nltk.download('stopwords')
 nltk.download('universal_tagset')
 
@@ -24,8 +24,8 @@ def extract_keywords(text, list):
 
     return list
 
-extract_keywords("neurosci_wiki_people_history.txt", kwteacher)
-extract_keywords("neurosci_bad_notes.txt", kwstudent)
+extract_keywords("data/neurosci_wiki_people_history.txt", kwteacher)
+extract_keywords("data/neurosci_bad_notes.txt", kwstudent)
 
 suggestedStudyTerms = []
 cnt = 0
@@ -51,3 +51,4 @@ print(tagkwdict)
 lenkwteacher = len(kwteacher)
 kwscore = int((cnt*100)/lenkwteacher)
 print(f"Similarity score = {kwscore}%")
+print("Suggested study terms: ", suggestedStudyTerms)
