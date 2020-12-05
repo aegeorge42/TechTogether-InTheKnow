@@ -2,39 +2,38 @@ import spacy
 from spacy import displacy
 from collections import Counter
 from string import punctuation
+import pke
 
-TEACHERNOTES = open("data/neurosci_wiki_people_history.txt")
-BADNOTES = open("data/neurosci_bad_notes.txt")
-teacher = TEACHERNOTES.read()
-bad = BADNOTES.read()
+import en_core_web_lg
+nlp = en_core_web_lg.load()
 
-nlp = spacy.load("en_core_web_lg")
+kwteacher = []
+kwstudent = []
 
-def get_keywords(text):
-    result = []
-    #pos_tag = ['PROPN', 'ADJ', 'NOUN']
-    pos_tag = ['PROPN', 'NOUN']
-    document = nlp(text.lower())
-    for token in document:
-        if(token.text in nlp.Defaults.stop_words or token.text in punctuation):
-            continue
-        if(token.pos_ in pos_tag):
-            result.append(token.text)        
-    return result
+def extract_keywords(text, list):
+    extractor = pke.unsupervised.TopicRank()
+    extractor.load_document(input=text, language='en')
+    extractor.candidate_selection()
+    extractor.candidate_weighting()
+    keyphrases = extractor.get_n_best(n=20)
+    for item in range(len(keyphrases)):
+        list.append(keyphrases[item][0])
 
+    return list
 
-keywordsteacher = set(get_keywords(teacher))
-keywordsbad = set(get_keywords(bad))
+extract_keywords("neurosci_wiki_people_history.txt", kwteacher)
+extract_keywords("neurosci_bad_notes.txt", kwstudent)
 
 suggestedStudyTerms = []
 cnt = 0
-for item in keywordsteacher:
-    if item in keywordsbad:
+for item in kwteacher:
+    if item in kwstudent:
         cnt += 1
     else:
         print(f"Missing: {item}")
         suggestedStudyTerms.append(item)
-        
+
+
 doc = nlp(str(suggestedStudyTerms))
 entitylist = [(X.text, X.label_) for X in doc.ents]
 
@@ -44,7 +43,8 @@ for pair in entitylist:
         dict[pair[1]] = [pair[0]]
     else:
         dict[pair[1]].append(pair[0])
+print(dict)
 
-lenkeywordsteacher = len(keywordsteacher)
-keywordscore = int((cnt*100)/lenkeywordsteacher)
-print(f"Similarity score = {keywordscore}%")
+lenkwteacher = len(kwteacher)
+kwscore = int((cnt*100)/lenkwteacher)
+print(f"Similarity score = {kwscore}%")
