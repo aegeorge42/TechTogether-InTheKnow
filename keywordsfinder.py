@@ -46,7 +46,7 @@ for pair in entitylist:
         tagkwdict[pair[1]] = [pair[0]]
     else:
         tagkwdict[pair[1]].append(pair[0])
-print(dict)
+print(tagkwdict)
 
 lenkwteacher = len(kwteacher)
 kwscore = int((cnt*100)/lenkwteacher)
