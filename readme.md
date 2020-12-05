@@ -8,5 +8,5 @@ team members:
 * [michelle-watson](https://github.com/Michelle-Watson)
 * [yuri7kim](https://github.com/yuri7kim)
 * [julliadoan](https://github.com/juliaadoann)
-* noemiems
+* [noemiems](https://github.com/noemiems)
 * [kaszklar](https://github.com/kaszklar)
