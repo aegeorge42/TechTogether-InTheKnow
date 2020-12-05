@@ -3,8 +3,8 @@ from spacy import displacy
 from collections import Counter
 from string import punctuation
 
-TEACHERNOTES = open("neurosci_wiki_people_history.txt")
-BADNOTES = open("neurosci_bad_notes.txt")
+TEACHERNOTES = open("data/neurosci_wiki_people_history.txt")
+BADNOTES = open("data/neurosci_bad_notes.txt")
 teacher = TEACHERNOTES.read()
 bad = BADNOTES.read()
 
