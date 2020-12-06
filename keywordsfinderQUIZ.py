@@ -239,7 +239,7 @@ for each in key_distractor_list:
     optionchoices = ['a', 'b', 'c', 'd']
     for idx, choice in enumerate(top4choices):
         print("\t", optionchoices[idx], ")", " ", choice)
-    print("\nMore options: ", choices[4:20], "\n\n")
-    index = index + 1
+    # print("\nMore options: ", choices[4:20], "\n\n")
+    index += 1
 
 # for definition questions, the defintion is given (keyword.definition()), and terms + like terms are generated
