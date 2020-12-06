@@ -6,8 +6,6 @@ team members:
 
 * [aegeorge42](https://github.com/aegeorge42)
 * [michelle-watson](https://github.com/Michelle-Watson)
-* [yuri7kim](https://github.com/yuri7kim)
-* [julliadoan](https://github.com/juliaadoann)
 * [noemiems](https://github.com/noemiems)
 * [kaszklar](https://github.com/kaszklar)
 
