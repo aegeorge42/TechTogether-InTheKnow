@@ -18,7 +18,7 @@ Notable links
 * [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
 
 
-Resources
+### python Resources
 
 PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
 @InProceedings{boudin:2016:COLINGDEMO,
@@ -32,6 +32,12 @@ PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
   url       = {http://aclweb.org/anthology/C16-2015}
 }
 
+pip install spacy
+pip install nltk
+pip install numpy
+pip install flashtext
+pip install pywsd (can be finnicky)
+pip install wordnet
 
 
 ### streamlit instructions
