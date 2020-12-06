@@ -87,6 +87,7 @@ extract_keywords(student_input, kwstudent)
 
 suggestedStudyTerms = []
 cnt = 0
+
 for item in kwteacher:
     if item in kwstudent:
         cnt += 1
@@ -106,7 +107,10 @@ for pair in entitylist:
         tagkwdict[pair[1]].append(pair[0])
 
 lenkwteacher = len(kwteacher)
-kwscore = int((cnt*100)/lenkwteacher)
+kwscore=0
+
+if lenkwteacher>0:
+    kwscore = int((cnt*100)/lenkwteacher)
 
 
 # ---- MAKE CONTAINERS ---#
