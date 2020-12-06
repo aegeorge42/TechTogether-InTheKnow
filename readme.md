@@ -17,8 +17,11 @@ Notable links
 
 * [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
 
+## Environment Setup
+We reccomend downloading Anaconda and creating a virtual environment before running the tool.
+See https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
-Resources
+### python libraries (backend)
 
 PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
 @InProceedings{boudin:2016:COLINGDEMO,
@@ -32,9 +35,19 @@ PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
   url       = {http://aclweb.org/anthology/C16-2015}
 }
 
+`pip install spacy`
+`pip install nltk`
+`pip install numpy`
+`pip install flashtext`
+`pip install wordnet`
+`pip install pywsd` (can be finnicky)
 
+##### pywsd installation
+This is a very old library, so you're going to need to older versions of certain libraries to run this locally.
+Copy and paste requirements.txt into the directory that you run your python commands. 
+Run `pip install -r requirements.txt`
 
-### streamlit instructions
+### streamlit instructions (frontend)
 
 From [here](https://docs.streamlit.io/en/stable/installation.html).
 
