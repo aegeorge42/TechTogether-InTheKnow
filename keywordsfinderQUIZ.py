@@ -13,6 +13,8 @@ nltk.download('stopwords')
 nltk.download('universal_tagset')
 # pip install numpy
 import numpy as np
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
 
 # Bulk of understanding about flashtext
 # https://blog.csdn.net/weixin_42690125/article/details/88535540
