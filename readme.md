@@ -31,3 +31,19 @@ PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
   pages     = {69--73},
   url       = {http://aclweb.org/anthology/C16-2015}
 }
+
+
+
+### streamlit instructions
+
+From [here](https://docs.streamlit.io/en/stable/installation.html).
+
+##### Installation
+
+`pip install streamlit` or `conda install -c conda-forge streamlit`
+
+You can run some examples using `streamlit hello` in the command line
+
+And run the app using `streamlit run app.py`
+
+Running either of the above will automatically start the server in your browser.
