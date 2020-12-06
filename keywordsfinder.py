@@ -53,3 +53,21 @@ kwscore = int((cnt*100)/lenkwteacher)
 print(f"Similarity score = {kwscore}%")
 print("Teacher's study terms: ", kwteacher)
 print("Suggested study terms: ", suggestedStudyTerms)
+
+# give each keyword a tag
+# tags listed @ http://www.nltk.org/book/ch05.html
+# some examples: NN - noun; NNS - plural noun; CD - date; VBG - ing verb;
+tagged_text = nltk.pos_tag(kwteacher)
+print(tagged_text)
+
+ans = []
+
+
+def match(tag):
+    for (w, t) in tagged_text:
+        if t == tag:
+            ans.append(w)
+
+
+match("NNS")
+print(ans)
