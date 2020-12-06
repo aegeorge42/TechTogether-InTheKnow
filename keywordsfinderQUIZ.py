@@ -97,7 +97,7 @@ import json
 import re
 import random
 # pip install pywsd
-from pywsd.similarity import max_similarity
+from pywsd.similarity import max_similarity #see readme if there are errors for this line
 from pywsd.lesk import adapted_lesk
 from pywsd.lesk import simple_lesk
 from pywsd.lesk import cosine_lesk
