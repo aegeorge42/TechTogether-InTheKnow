@@ -94,7 +94,6 @@ import re
 
 import requests
 import json
-import re
 import random
 # pip install pywsd
 from pywsd.similarity import max_similarity #see readme if there are errors for this line
