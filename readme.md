@@ -14,11 +14,11 @@ team members:
 Notable links
 
 * [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
-* [DevPost Submission] (https://devpost.com/software/student-notes-checker)
+* [DevPost Submission](https://devpost.com/software/student-notes-checker)
 
 ## Environment Setup
 We reccomend downloading Anaconda and creating a virtual environment before running the tool.
-See https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+See [Conda Environment Doc](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 ### python libraries (backend)
 
