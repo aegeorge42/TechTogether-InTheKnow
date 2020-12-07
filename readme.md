@@ -14,6 +14,7 @@ team members:
 Notable links
 
 * [shared google drive folder](https://drive.google.com/drive/u/1/folders/1gZ-yYVNB7FpIJpsBmniMmgcNEcc719Eh)
+* [DevPost Submission] (https://devpost.com/software/student-notes-checker)
 
 ## Environment Setup
 We reccomend downloading Anaconda and creating a virtual environment before running the tool.
@@ -22,15 +23,15 @@ See https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-envir
 ### python libraries (backend)
 
 PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
-@InProceedings{boudin:2016:COLINGDEMO,
-  author    = {Boudin, Florian},
-  title     = {pke: an open source python-based keyphrase extraction toolkit},
-  booktitle = {Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: System Demonstrations},
-  month     = {December},
-  year      = {2016},
-  address   = {Osaka, Japan},
-  pages     = {69--73},
-  url       = {http://aclweb.org/anthology/C16-2015}
+<br>@InProceedings{boudin:2016:COLINGDEMO,
+<br>  author    = {Boudin, Florian},
+<br>  title     = {pke: an open source python-based keyphrase extraction toolkit},
+<br>  booktitle = {Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: System Demonstrations},
+<br>  month     = {December},
+<br>  year      = {2016},
+<br>  address   = {Osaka, Japan},
+<br>  pages     = {69--73},
+<br>  url       = {http://aclweb.org/anthology/C16-2015}
 }
 
 `pip install spacy`
@@ -43,7 +44,7 @@ PKE - python keyphrase extraction (Github url: https://github.com/boudinfl/pke)
 ##### pywsd installation
 This is a very old library, so you're going to need to older versions of certain libraries to run this locally.
 Copy and paste requirements.txt into the directory that you run your python commands. 
-Run `pip install -r requirements.txt`
+<br>Run `pip install -r requirements.txt`
 
 ### streamlit instructions (frontend)
 
